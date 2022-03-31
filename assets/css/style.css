@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap');
 
 body {
-    padding: 50px 100px;
+    padding: 50px 100px 50px 0;
     display: flex;
     justify-content: center;
     background-color: bisque;
@@ -9,10 +9,11 @@ body {
 
 h1 {
     text-align: center;
-    
     font-family: 'BhuTuka Expanded One', cursive;
 }
-.container{
+
+
+.etchContainer{
     background-color: red;
     width: auto;
     height: 75%;
@@ -28,16 +29,15 @@ h1 {
     width: 500px;
     height: 500px; 
     margin: 20px;
-    box-shadow: 1px black;
 }
 
 .square {
-    border: 1px solid black;
+    
     background-color: white;
     
 }
 
-.red {
+.fill {
     background-color: black;
 }
 
@@ -63,6 +63,21 @@ h1 {
     background-color: white;
     height: 40px;
     width: 40px;
-    border: 1px solid beige;
+    border: 2px solid beige;
     border-radius: 50%;
 }
+
+button {
+    width: 100px;
+    height: 40px;
+    margin-left: 0px;
+}
+
+.controlContainer {
+    height: 646px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 100px;
+}
+

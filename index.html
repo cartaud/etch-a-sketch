@@ -8,7 +8,14 @@
 </head>
 <body>
     
-    <div class="container">
+    <div class="controlContainer">
+        <button></button>
+        <button onClick="blackToggle()">BLACK</button>
+        <button onClick="rainbowToggle()">RAINBOW</button>
+        <button onClick="clearToggle()">CLEAR</button>
+    </div>
+
+    <div class="etchContainer">
         <h1>ETCH-A-SKETCH</h1>
         <div class="screen"></div>
         <div class="circles">
@@ -16,6 +23,8 @@
             <div class="outerCircle"><div class="innerCircle"></div></div>
         </div>
     </div>
+
+    
     
 
     <script src="./script.js"></script>
