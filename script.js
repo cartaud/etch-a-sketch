@@ -23,6 +23,7 @@ slider.oninput = function () {
     reSize(this.value);
 }
 
+//removes all screen squares and creates new squares for new size
 function reSize(newSize) {
     let child = container.lastElementChild;
     while (child) {
@@ -42,31 +43,20 @@ function reSize(newSize) {
     }
 }
 
-
-
-
-
-
-
-
 //on mouse over, the squares background color changes to black
 function blackFunc() {
     this.style.backgroundColor = 'black';
 }
 
+//assigns a random color from array for every square
 function rainbowFunc() {
+    const rainbowArr = ['red', 'blue', 'green', 'pink', 'purple', 'orange', 'yellow'];
+    let rand = Math.floor(Math.random() * rainbowArr.length);
     this.style.backgroundColor = rainbowArr[rand];
-    
 }
 
 
-
-//attempting to create rainbow effect WIP
-const rainbowArr = ['red', 'blue', 'green', 'pink', 'purple', 'orange', 'yellow'];
-let rand = Math.floor(Math.random() * rainbowArr.length)
-
-
-
+//assigns new event listener 
 function change(value) {
     //creates a list of every element with class = square
     const squares = document.querySelectorAll('.square');
@@ -94,30 +84,5 @@ function change(value) {
 
 
 /*
-//Will change draw color back to black on button click
-function blackToggle() {
-    for (let i=0; i<squares.length;i++){
-        squares[i].removeEventListener('mouseover', rainbowFunc)
-        squares[i].addEventListener('mouseover', blackFunc)
-    }
-}
 
-function rainbowToggle() {
-    for (let i=0; i<squares.length;i++){
-        squares[i].removeEventListener('mouseover', blackFunc)
-        squares[i].addEventListener('mouseover', rainbowFunc)
-    }
-}
-
-function clearToggle() {
-    for (let i=0; i<squares.length;i++){
-        squares[i].style.backgroundColor = 'white';
-        squares[i].addEventListener('mouseover', blackFunc);
-    }
-}
-
-//Initializes the starting color to be black 
-for (let i=0; i<squares.length;i++){
-    squares[i].addEventListener('mouseover', blackFunc)
-}
 */
