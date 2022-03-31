@@ -1,10 +1,15 @@
 const container = document.querySelector('.screen');
 
+
+const size = prompt("Enter a number 1-100:");
+  
+const total = size * size;
+
 // dimension for a single square (will add option for user to chose this value later on)
-const dim = 31.25;
+const dim = (500/size);
 
 //creates specified number of squares and adds them to container
-for (let i=0; i<256 ; i++){
+for (let i=0; i<total ; i++){
     const sqr = document.createElement('div');
     sqr.classList.add('square');
     sqr.style.width = `${dim}px`;
