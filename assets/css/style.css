@@ -118,3 +118,9 @@ button {
     cursor: pointer; /* Cursor on hover */
   }
 
+  #customColor {
+      margin-top: 5px;
+      width: 60%;
+      margin-left:0;
+  }
+

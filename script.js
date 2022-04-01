@@ -50,7 +50,7 @@ function blackFunc() {
 
 //assigns a random color from array for every square
 function rainbowFunc() {
-    const rainbowArr = ['red', 'blue', 'green', 'pink', 'purple', 'orange', 'yellow'];
+    const rainbowArr = ['red', 'blue', 'green', 'pink', 'purple', 'orange', 'yellow', 'cyan', 'indigo', 'violet', 'ForestGreen', 'HotPink', 'IndianRed', 'Lime', 'Teal'];
     let rand = Math.floor(Math.random() * rainbowArr.length);
     this.style.backgroundColor = rainbowArr[rand];
 }
@@ -82,7 +82,33 @@ function change(value) {
 }
 
 
+//function that allows user to choose drawing color
+let custom = document.getElementById('customColor');
+custom.oninput = function() {
+    let clr = this.value
+    
+    const squares = document.querySelectorAll('.square');
+    for (let i=0; i<squares.length;i++){
+        squares[i].removeEventListener('mouseover', blackFunc)
+        squares[i].removeEventListener('mouseover', rainbowFunc)
+        squares[i].addEventListener('mouseover', () => {
+            squares[i].style.backgroundColor = clr;
+            
+        });
+    } 
+}
+
+
 
 /*
 
+    
+
+else if (value==3){
+        for (let i=0; i<squares.length;i++){
+            squares[i].removeEventListener('mouseover', blackFunc)
+            squares[i].removeEventListener('mouseover', rainbowFunc)
+            squares[i].addEventListener('mouseover', customFunc)
+        }
+    }
 */

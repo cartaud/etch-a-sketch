@@ -10,8 +10,12 @@
     
     <div class="controlContainer">
         <div class="slideContainer">
+            <p>Pixel Size: <span id="slideValue"></span></p>
             <input type="range" min="1" max="100" class="slide" id="myRange">
-            <p>Value: <span id="slideValue"></span></p>
+        </div>
+        <div>
+            <p>Pick a color:</p>
+            <input type="color" id="customColor" value="#000000">
         </div>
         <button onClick="change(1)">BLACK</button>
         <button onClick="change(2)">RAINBOW</button>
