@@ -2,9 +2,9 @@ const container = document.querySelector('.screen');
 
 let slider = document.getElementById('myRange');
 let output = document.getElementById('slideValue');
-output.innerHTML = slider.value;
+output.innerHTML = slider.value + ' x ' + slider.value;
 
-let size = output.innerHTML;
+let size = slider.value;
 let total = size * size; //dimension for entire sketch screen
 let dim = (500/size); // dimension for a single square 
 //creates specified number of squares and adds them to container
@@ -18,7 +18,7 @@ for (let i=0; i<total ; i++){
 }
 
 slider.oninput = function () {
-    output.innerHTML = this.value;
+    output.innerHTML = this.value + ' x ' + this.value;
     change(3);
     reSize(this.value);
 }
